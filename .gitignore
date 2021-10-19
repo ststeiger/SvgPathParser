@@ -15,8 +15,14 @@ TestResults
 
 # Build results
 [Dd]ebug/
+[Dd]ebugPublic/
 [Rr]elease/
+[Rr]eleases/
 x64/
+x86/
+bld/
+[Bb]in/
+[Oo]bj/
 *_i.c
 *_p.c
 *.ilk
@@ -36,6 +42,10 @@ x64/
 *.vspscc
 *.vssscc
 .builds
+
+
+# Visual Studio 2015 cache/options directory
+.vs/
 
 # Visual C++ cache files
 ipch/

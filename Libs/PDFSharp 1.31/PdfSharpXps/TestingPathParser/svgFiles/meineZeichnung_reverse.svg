@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="561.26" height="384.517" viewBox="0 0 150 100">
+  <path fill="skyblue" fill-rule="evenodd"
+     d="M0 0h148.5v101.737H0Z"
+  />
+  <path fill="deeppink" fill-rule="evenodd"
+     d="M 23.917,58.9 V 77.82 H 53.189 V 58.9 Z" 
+  />
+  <path fill="deeppink" fill-rule="evenodd"
+     d="m 93.169,60.15 v 18.92 h 29.272 V 60.15 Z" 
+  />
+  <path fill="deeppink" fill-rule="evenodd"
+     d="m 23.56,11.959 v 18.92 h 29.272 v -18.92 z"
+  />
+  <path fill="deeppink" fill-rule="evenodd"
+     d="m 90.314,13.386 v 18.92 h 29.271 v -18.92 z"
+  />
+</svg>

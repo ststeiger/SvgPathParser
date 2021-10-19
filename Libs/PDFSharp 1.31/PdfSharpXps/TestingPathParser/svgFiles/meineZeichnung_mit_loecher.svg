@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="561.26" height="384.517" viewBox="0 0 150 100">
+  <path fill="skyblue" fill-rule="evenodd"
+     d="M0 0h148.5v101.737H0Z M 23.917,58.9 V 77.82 H 53.189 V 58.9 Z M 93.169,60.15 v 18.92 h 29.272 V 60.15 Z M 23.56,11.959 v 18.92 h 29.272 v -18.92 Z M 90.314,13.386 v 18.92 h 29.271 v -18.92 Z"
+  />
+
+
+<!--
+  
+https://stackoverflow.com/questions/3742479/how-to-cut-a-hole-in-an-svg-rectangle
+https://stackoverflow.com/questions/13329125/removing-transforms-in-svg-files
+The "Reverse" command (Shift+R) reverses the direction 
+https://wiki.inkscape.org/wiki/Release_notes/0.48
+https://catherineh.github.io/programming/2018/04/03/25-ways-of-cutting-svg-shapes
+
+
+
+shapes:
+https://inkscape.org/doc/tutorials/shapes/tutorial-shapes.html
+https://svgsilh.com/image/1091576.html
+https://www.onlinewebfonts.com/icon/33551
+
+https://stackoverflow.com/questions/1360869/how-to-use-html-to-print-header-and-footer-on-every-printed-page-of-a-document
+-->
+</svg>
