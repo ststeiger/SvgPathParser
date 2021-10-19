@@ -51,6 +51,8 @@ namespace MyXpsTest
             AnalyzePath(selectedPath);
             System.Console.WriteLine(" ==================================== ");
             PdfSharp.Xps.CrappyCrap.AnalyzePath(selectedPath);
+
+            System.Console.WriteLine(" --- Press any key to continue --- ");
             System.Console.ReadKey();
         }
     }

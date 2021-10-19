@@ -44,7 +44,7 @@ namespace PdfSharp.Xps.XpsModel
     /// </summary>
     public static implicit operator XMatrix(Matrix matrix)
     {
-      return new XMatrix(matrix.m11, matrix.m12, matrix.m21, matrix.m22, matrix.offsetX, matrix.offsetY);
+        return new XMatrix(matrix.m11, matrix.m12, matrix.m21, matrix.m22, matrix.offsetX, matrix.offsetY);
     }
 
     internal double m11;
