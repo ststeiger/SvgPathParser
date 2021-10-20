@@ -7,12 +7,14 @@ namespace PdfSharp.Xps.Parsing
 {
 
 
-    partial class XpsParser
+    public partial class XpsParser
     {
+
+
         /// <summary>
         /// Parses a PolyQuadraticBezierSegment element.
         /// </summary>
-        PolyQuadraticBezierSegment ParsePolyQuadraticBezierSegment()
+        protected PolyQuadraticBezierSegment ParsePolyQuadraticBezierSegment()
         {
             Debug.Assert(this.reader.Name == "PolyQuadraticBezierSegment");
             PolyQuadraticBezierSegment seg = new PolyQuadraticBezierSegment();
@@ -35,6 +37,10 @@ namespace PdfSharp.Xps.Parsing
             }
             MoveBeyondThisElement();
             return seg;
-        }
+        } // End Function ParsePolyQuadraticBezierSegment 
+
+
     }
+
+
 }

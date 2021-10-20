@@ -1,10 +1,13 @@
-﻿using System;
-
+﻿
 namespace PdfSharp.Xps.XpsModel
 {
-  enum FillRule
-  {
-    EvenOdd,
-    NonZero,
-  }
+
+
+    public enum FillRule
+    {
+        EvenOdd,
+        NonZero,
+    }
+
+
 }

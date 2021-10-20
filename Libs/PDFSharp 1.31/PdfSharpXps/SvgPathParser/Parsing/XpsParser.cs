@@ -1,26 +1,25 @@
-﻿using System;
+﻿
 using System.Diagnostics;
-using System.Collections.Generic;
 using System.Globalization;
-using System.Text;
-using System.Xml;
-using System.IO;
-using PdfSharp.Xps.XpsModel;
+
+
 
 namespace PdfSharp.Xps.Parsing
 {
+
+
     /// <summary>
     /// Simple XPS parser.
     /// The parser is not a syntax checker and therefore expects well-defined XPS XML to work properly.
     /// </summary>
-    partial class XpsParser
+    public partial class XpsParser
     {
 
-        XmlTextReader reader;
+        System.Xml.XmlTextReader reader;
 
 
 
-        public XpsParser(XmlTextReader rdr)
+        public XpsParser(System.Xml.XmlTextReader rdr)
         {
             this.reader = rdr;
         }
@@ -37,7 +36,7 @@ namespace PdfSharp.Xps.Parsing
         /// </summary>
         bool ParseBool(string value)
         {
-            return Boolean.Parse(value);
+            return bool.Parse(value);
         }
 
         /// <summary>
@@ -45,7 +44,7 @@ namespace PdfSharp.Xps.Parsing
         /// </summary>
         internal static double ParseDouble(string value)
         {
-            return Double.Parse(value.Replace(" ", ""), CultureInfo.InvariantCulture);
+            return double.Parse(value.Replace(" ", ""), CultureInfo.InvariantCulture);
         }
 
         /// <summary>
@@ -53,7 +52,7 @@ namespace PdfSharp.Xps.Parsing
         /// </summary>
         T ParseEnum<T>(string value) where T : struct
         {
-            return (T)Enum.Parse(typeof(T), value);
+            return (T)System.Enum.Parse(typeof(T), value);
         }
 
 
@@ -65,6 +64,7 @@ namespace PdfSharp.Xps.Parsing
             return this.reader.MoveToNextAttribute();
         }
 
+
         /// <summary>
         /// Moves to next element by skipping all white space.
         /// Returns true if XmlNodeType.Element is the current node type.
@@ -72,12 +72,14 @@ namespace PdfSharp.Xps.Parsing
         bool MoveToNextElement()
         {
             bool success = this.reader.Read();
+
             if (success)
             {
-                XmlNodeType type = this.reader.MoveToContent();
-                Debug.Assert(type == XmlNodeType.Element || type == XmlNodeType.EndElement || type == XmlNodeType.None);
-                success = type == XmlNodeType.Element;
+                System.Xml.XmlNodeType type = this.reader.MoveToContent();
+                Debug.Assert(type == System.Xml.XmlNodeType.Element || type == System.Xml.XmlNodeType.EndElement || type == System.Xml.XmlNodeType.None);
+                success = type == System.Xml.XmlNodeType.Element;
             }
+
             return success;
         }
 
@@ -86,14 +88,14 @@ namespace PdfSharp.Xps.Parsing
         /// </summary>
         void MoveBeyondThisElement() // string name, int depth)
         {
-            if (!this.reader.IsEmptyElement && this.reader.NodeType != XmlNodeType.Comment)
+            if (!this.reader.IsEmptyElement && this.reader.NodeType != System.Xml.XmlNodeType.Comment)
             {
-                if (this.reader.NodeType == XmlNodeType.XmlDeclaration)
+                if (this.reader.NodeType == System.Xml.XmlNodeType.XmlDeclaration)
                 {
                     MoveToNextElement();
                     return;
                 }
-                else if (this.reader.NodeType == XmlNodeType.Attribute)
+                else if (this.reader.NodeType == System.Xml.XmlNodeType.Attribute)
                 {
                     this.reader.MoveToElement();
                     if (this.reader.IsEmptyElement)
@@ -102,12 +104,16 @@ namespace PdfSharp.Xps.Parsing
                         return;
                     }
                 }
+
                 MoveToNextElement();
                 while (this.reader.IsStartElement())
                     MoveBeyondThisElement();
             }
             MoveToNextElement(); // next element
-        }
+        } // End Sub MoveBeyondThisElement 
+
 
     }
+
+
 }

@@ -28,16 +28,16 @@
 #endregion
 
 using System;
-using System.Diagnostics;
-using System.Collections.Generic;
-using System.Text;
 using System.Globalization;
+
 
 namespace PdfSharp.Internal
 {
+
+
     // Relected from WPF to ensure compatibility
     // Use netmassdownloader -d "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\v3.0" -output g:\cachetest -v
-    public class TokenizerHelper
+    internal class TokenizerHelper
     {
         internal char PeekNextCharacter()
         {
@@ -219,6 +219,8 @@ namespace PdfSharp.Internal
         {
             get { return this.foundSeparator; }
         }
+
+
         private bool foundSeparator;
 
         private char argSeparator;
@@ -229,4 +231,6 @@ namespace PdfSharp.Internal
         private string str;
         private int strLen;
     }
+
+
 }

@@ -6,11 +6,15 @@ using PdfSharp.Xps.Parsing;
 
 namespace PdfSharp.Xps.XpsModel
 {
+
+
     /// <summary>
     /// Represents the width and height of an object.
     /// </summary>
     public struct Size
     {
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="Size"/> struct.
         /// </summary>
@@ -20,6 +24,7 @@ namespace PdfSharp.Xps.XpsModel
             Width = width;
             Height = height;
         }
+
 
         /// <summary>
         /// Gets or sets the width.
@@ -31,6 +36,7 @@ namespace PdfSharp.Xps.XpsModel
         /// </summary>
         public double Height { get; set; }
 
+
         /// <summary>
         /// Performs an implicit conversion from <see cref="PdfSharp.Xps.XpsModel.Size"/> to <see cref="PdfSharp.Drawing.XSize"/>.
         /// </summary>
@@ -38,6 +44,7 @@ namespace PdfSharp.Xps.XpsModel
         {
             return new XSize(size.Width, size.Height);
         }
+
 
         /// <summary>
         /// Parses the specified value.
@@ -50,5 +57,9 @@ namespace PdfSharp.Xps.XpsModel
             size.Height = ParserHelper.ParseDouble(tokenizer.NextTokenRequired());
             return size;
         }
+
+
     }
+
+
 }

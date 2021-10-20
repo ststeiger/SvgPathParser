@@ -2,16 +2,19 @@
 using System.Diagnostics;
 using PdfSharp.Xps.XpsModel;
 
+
 namespace PdfSharp.Xps.Parsing
 {
 
 
-    partial class XpsParser
+    public partial class XpsParser
     {
+
+
         /// <summary>
         /// Parses a PolyLineSegment element.
         /// </summary>
-        PolyLineSegment ParsePolyLineSegment()
+        protected PolyLineSegment ParsePolyLineSegment()
         {
             Debug.Assert(this.reader.Name == "PolyLineSegment");
             PolyLineSegment seg = new PolyLineSegment();
@@ -34,6 +37,10 @@ namespace PdfSharp.Xps.Parsing
             }
             MoveBeyondThisElement();
             return seg;
-        }
+        } // End Function ParsePolyLineSegment 
+
+
     }
+
+
 }

@@ -1,16 +1,16 @@
-﻿using System;
+﻿
+using System;
 using System.Diagnostics;
-using System.Collections.Generic;
-using System.Globalization;
 using System.Text;
-using System.Xml;
-using System.IO;
 using PdfSharp.Internal;
 using PdfSharp.Xps.XpsModel;
 
+
 namespace PdfSharp.Xps.Parsing
 {
-    partial class XpsParser
+
+
+    public partial class XpsParser
     {
 
         /// <summary>
@@ -449,5 +449,8 @@ namespace PdfSharp.Xps.Parsing
             return data;
         }
 
+
     }
+
+
 }

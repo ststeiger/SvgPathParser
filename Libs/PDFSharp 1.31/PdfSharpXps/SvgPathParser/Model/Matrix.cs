@@ -1,15 +1,17 @@
-﻿using System.Globalization;
+﻿
+using System.Globalization;
 using PdfSharp.Drawing;
 using PdfSharp.Internal;
 
 
-
 namespace PdfSharp.Xps.XpsModel
 {
+
+
     /// <summary>
     /// Represents a transformation matrix.
     /// </summary>
-    struct Matrix
+    public struct Matrix
     {
         public Matrix(double m11, double m12, double m21, double m22, double offsetX, double offsetY)
         {
@@ -53,4 +55,6 @@ namespace PdfSharp.Xps.XpsModel
         internal double offsetX;
         internal double offsetY;
     }
+
+
 }

@@ -1,12 +1,17 @@
 ﻿
-
 namespace PdfSharp.Xps.XpsModel
 {
+
+
     /// <summary>
     /// Base class for all XPS elements.
     /// </summary>
     public class XpsElement
     {
+
+        XpsElement parent;
+
+
         /// <summary>
         /// Gets or sets the parent of this element.
         /// </summary>
@@ -15,7 +20,8 @@ namespace PdfSharp.Xps.XpsModel
             get { return this.parent; }
             set { this.parent = value; }
         }
-        XpsElement parent;
+        
+
 
         ///// <summary>
         ///// Gets or sets the ResourceDictionary parent of this element.
@@ -49,5 +55,9 @@ namespace PdfSharp.Xps.XpsModel
         //  set { this.part = value; }
         //}
         //PdfPart part;
+
+
     }
+
+
 }

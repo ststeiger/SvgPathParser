@@ -27,32 +27,29 @@
 // DEALINGS IN THE SOFTWARE.
 #endregion
 
-using System;
-#if GDI
-using System.Drawing;
-#endif
-#if WPF
-using System.Windows;
-#endif
-using PdfSharp.Drawing;
+
 
 namespace PdfSharp.Internal
 {
-  /// <summary>
-  /// Some static helper functions for calculations.
-  /// </summary>
-  internal static class Calc
-  {
-    /// <summary>
-    /// Degree to radiant factor.
-    /// </summary>
-    public const double Deg2Rad = Math.PI / 180;
+
 
     /// <summary>
-    /// Half of pi.
+    /// Some static helper functions for calculations.
     /// </summary>
-    public const double πHalf = Math.PI / 2;
-    // α - β κ
+    internal static class Calc
+    {
+        /// <summary>
+        /// Degree to radiant factor.
+        /// </summary>
+        public const double Deg2Rad = System.Math.PI / 180;
 
-  }
+        /// <summary>
+        /// Half of pi.
+        /// </summary>
+        public const double πHalf = System.Math.PI / 2;
+        // α - β κ
+
+    }
+
+
 }

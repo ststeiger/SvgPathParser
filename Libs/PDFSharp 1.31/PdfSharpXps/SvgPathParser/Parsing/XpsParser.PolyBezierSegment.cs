@@ -7,7 +7,7 @@ namespace PdfSharp.Xps.Parsing
 {
 
 
-    partial class XpsParser
+    public partial class XpsParser
     {
         /// <summary>
         /// Parses a PolyBezierSegment element.
@@ -37,4 +37,6 @@ namespace PdfSharp.Xps.Parsing
             return seg;
         }
     }
+
+
 }

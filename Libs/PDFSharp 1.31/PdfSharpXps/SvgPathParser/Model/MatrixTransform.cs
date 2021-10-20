@@ -1,18 +1,20 @@
 ﻿
 namespace PdfSharp.Xps.XpsModel
 {
+
+
     /// <summary>
     /// Creates an arbitrary affine matrix transformation that manipulates objects or coordinate systems
     /// in a two-dimensional plane.
     /// </summary>
-    class MatrixTransform : XpsElement
+    public class MatrixTransform : XpsElement
     {
-        internal MatrixTransform()
+        public MatrixTransform()
         {
             Matrix = new Matrix(1, 0, 0, 1, 0, 0);
         }
 
-        internal MatrixTransform(Matrix matrix)
+        public MatrixTransform(Matrix matrix)
         {
             Matrix = matrix;
         }
@@ -35,4 +37,6 @@ namespace PdfSharp.Xps.XpsModel
               transform.Matrix.offsetX, transform.Matrix.offsetY);
         }
     }
+
+
 }

@@ -1,12 +1,16 @@
 ﻿
 using PdfSharp.Drawing;
 
+
 namespace PdfSharp.Xps.XpsModel
 {
+
+
     /// <summary>
     /// A series of Bézier segments.
     /// </summary>
-    class PolyBezierSegment : PathSegment
+    public class PolyBezierSegment 
+        : PathSegment
     {
         /// <summary>
         /// Gets the smallest rectangle that completely contains all points of the segments.
@@ -28,4 +32,6 @@ namespace PdfSharp.Xps.XpsModel
         /// </summary>
         public PointStopCollection Points = new PointStopCollection();
     }
+
+
 }

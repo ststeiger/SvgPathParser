@@ -1,12 +1,16 @@
 ﻿
 using PdfSharp.Drawing;
 
+
 namespace PdfSharp.Xps.XpsModel
 {
+
+
     /// <summary>
     /// Specifies a set of one or more segment elements defining a closed region.
     /// </summary>
-    class PathFigure : XpsElement
+    public class PathFigure 
+        : XpsElement
     {
         /// <summary>
         /// Gets the smallest rectangle that completely contains all segments of the figure.
@@ -41,4 +45,6 @@ namespace PdfSharp.Xps.XpsModel
 
         public PathSegmentCollection Segments = new PathSegmentCollection();
     }
+
+
 }
